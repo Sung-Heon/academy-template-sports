@@ -1,0 +1,27 @@
+{
+  "features": [
+    "Student",
+    "Session",
+    "Booking",
+    "Membership",
+    "Notice"
+  ],
+  "entities": [
+    "Student",
+    "Session",
+    "Booking",
+    "Membership",
+    "Notice"
+  ],
+  "roles": [
+    "owner",
+    "staff"
+  ],
+  "workflows": [
+    "멤버",
+    "클래스 일정",
+    "예약 · 출석",
+    "회원권",
+    "공지"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "Student": [
+    {
+      "id": "student-1",
+      "name": "김하늘",
+      "phone": "010-0000-1001",
+      "guardianName": "김보호",
+      "guardianPhone": "010-0000-2001"
+    },
+    {
+      "id": "student-2",
+      "name": "이서준",
+      "phone": "010-0000-1002",
+      "guardianName": "이보호",
+      "guardianPhone": "010-0000-2002"
+    },
+    {
+      "id": "student-3",
+      "name": "박지우",
+      "phone": "010-0000-1003",
+      "guardianName": "박보호",
+      "guardianPhone": "010-0000-2003"
+    },
+    {
+      "id": "student-4",
+      "name": "최다은",
+      "phone": "010-0000-1004",
+      "guardianName": "최보호",
+      "guardianPhone": "010-0000-2004"
+    }
+  ],
+  "Session": [
+    {
+      "id": "session-1",
+      "title": "키즈 농구 A",
+      "date": "2026-10-08",
+      "time": "15:00",
+      "coach": "정민호",
+      "capacity": 8
+    },
+    {
+      "id": "session-2",
+      "title": "주니어 수영",
+      "date": "2026-10-08",
+      "time": "16:30",
+      "coach": "김유진",
+      "capacity": 6
+    },
+    {
+      "id": "session-3",
+      "title": "주말 축구",
+      "date": "2026-10-10",
+      "time": "10:00",
+      "coach": "정민호",
+      "capacity": 12
+    }
+  ],
+  "Booking": [
+    {
+      "id": "booking-1",
+      "studentId": "student-1",
+      "sessionId": "session-1",
+      "status": "booked"
+    },
+    {
+      "id": "booking-2",
+      "studentId": "student-2",
+      "sessionId": "session-1",
+      "status": "attended"
+    },
+    {
+      "id": "booking-3",
+      "studentId": "student-3",
+      "sessionId": "session-2",
+      "status": "booked"
+    }
+  ],
+  "Membership": [
+    {
+      "id": "member-1",
+      "studentId": "student-1",
+      "title": "키즈 농구 월 회원권",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-31"
+    },
+    {
+      "id": "member-2",
+      "studentId": "student-3",
+      "title": "수영 기초반",
+      "startDate": "2026-10-01",
+      "endDate": "2026-12-31"
+    }
+  ],
+  "Notice": [
+    {
+      "id": "notice-1",
+      "title": "주말 가족 운동회",
+      "date": "2026-10-08",
+      "content": "토요일 오전 10시, 운동화와 물병을 챙겨 운동장에서 만나요."
+    }
+  ]
+}
