@@ -28,7 +28,7 @@ for(const profile of profiles) test(profile.id+' desktop, mobile and writable wo
     else if(field.type==='time')await input.fill('15:00');
     else if(field.type!=='url')await input.fill('브라우저 '+field.label);
    }
-   await page.getByRole('button',{name:'저장하기'}).click();await expect(page.locator('#editor')).not.toBeVisible();await expect(page.locator('#content')).toHaveAttribute('aria-busy','false');
+   await page.getByRole('button',{name:'저장하기'}).click();if(id==='Booking'){await expect(page.locator('#form-error')).toContainText('이미 예약');await page.locator('#form-fields [name="studentId"]').selectOption({label:'브라우저 확인'});await page.getByRole('button',{name:'저장하기'}).click();}await expect(page.locator('#editor')).not.toBeVisible();await expect(page.locator('#content')).toHaveAttribute('aria-busy','false');
   }
   await page.locator('nav button[data-feature="overview"]').click();await page.setViewportSize({width:390,height:844});await expect(page.locator('h1')).toHaveText(profile.tagline);await page.screenshot({path:join(tmpdir(),'onhi-preview',profile.slug+'-mobile.png'),fullPage:true});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);expect(errors).toEqual([]);await context.close();
  }finally{if(child&&child.exitCode===null){child.kill('SIGTERM');await new Promise(resolve=>child.once('exit',resolve));}await rm(dir,{recursive:true,force:true});}
